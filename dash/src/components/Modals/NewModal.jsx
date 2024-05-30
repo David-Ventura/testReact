@@ -4,7 +4,9 @@ import {Input} from 'reactstrap'
 import useFetch from '../Hooks/useFetch';
 import { useParams } from "react-router-dom";
 import { getTaskRequest, getTaskRequestIo } from "../../api/newRegistro.api";
+import API_CONFIG from "../../api/Config";
 
+const enviarBd = API_CONFIG.endpoints.postData;
 
 const {
     postFetch, getFetchId, getFetcho, getTaskId, getL, getTask,getTasssk
@@ -68,7 +70,7 @@ load();
       const handleSubmit = (e) => {
         e.preventDefault();
 //funciona el envio
-        postFetch('tasks/',formData)
+        postFetch(enviarBd,formData)
             .then((respuesta)=>{
                 console.log('respues->', respuesta)
             })

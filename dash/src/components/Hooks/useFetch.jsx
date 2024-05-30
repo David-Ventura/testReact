@@ -34,6 +34,20 @@ import { getTaskRequest, getTaskRequestIo } from "../../api/newRegistro.api";
      getFetch
    };
 */
+const otroGet = (urlParcial)=>{
+  const url = `${urlBase}/${urlParcial}`;
+    return new Promise((resolve, reject) => {
+      fetch(url)
+      .then((response) => response.json())
+      .then((datos)=>{
+        resolve(datos)
+      
+      })
+      .catch((error)=>{
+        reject(error)
+      })
+    })
+}
 
    const postFetch=(urlParcial, datos)=>{
     const url = `${urlBase}/${urlParcial}`;
@@ -281,6 +295,6 @@ const validarserver = (urlParcial) => {
 
 //
 
-return{ getFetch, postFetch, getFetchId, getTaskId, getL, getTask,getTasssk,getTaskUpdate,deleteTask}
+return{ getFetch, postFetch, getFetchId, getTaskId, getL, getTask,getTasssk,getTaskUpdate,deleteTask,otroGet}
  }
 export default useFetch;
