@@ -1,0 +1,28 @@
+@import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
+body {
+  padding-top: 80px;
+}
+#header{
+  background-color: rgb(0, 121, 105) ;
+  color: #ffffff !important;
+}
+/* Este es para los elementos en general */
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+  }
+  /*  Este es para el elemento activo lo puedes omitir si asi deseas */
+  .navbar-light .navbar-nav .active>.nav-link  {
+   color: red;
+  }
+
+
+#footer{
+    height: 50px;
+    background-color: rgb(1, 15, 77);
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
